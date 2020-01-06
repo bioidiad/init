@@ -1,0 +1,2 @@
+dig slash16.org +short ns slash16.org
+dig slash16.org +nssearch slash16.org

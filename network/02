@@ -1,0 +1,2 @@
+a) ip link | grep "ether" | awk '{print $4}'
+b) arp | grep "192" | awk '{print $1}'
