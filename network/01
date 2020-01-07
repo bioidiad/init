@@ -1,1 +1,1 @@
-ip link | grep ": " | cut -d ":" -f 2,1
+ifconfig | grep "mtu" | awk {'print $1'} | cut -d: -f1

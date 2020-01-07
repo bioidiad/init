@@ -1,2 +1,2 @@
-a) ip link | grep "ether" | awk '{print $4}'
-b) arp | grep "192" | awk '{print $1}'
+a) ifconfig | grep "broadcast" | awk {'print $6'}
+b) arp -a | awk {'print $2'} | cut -b 2-16 | cut -d')' -f1
