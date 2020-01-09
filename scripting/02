@@ -1,0 +1,15 @@
+#!/bin/sh
+
+read -p "Enter user name : " username
+usercheck=$(getent passwd $username)
+
+if [ -z "$usercheck"]
+then
+        echo "$username not found!"
+else
+        cd /root
+        mkdir -p "Archive"
+        cd Archive/
+        tar czvf "$username".tar.gz /home/"$username"
+        sudo userdel -rf "$username"
+fi

@@ -1,1 +1,1 @@
-cat /etc/hostname
+host ip-from-previous  
