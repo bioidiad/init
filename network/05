@@ -1,2 +1,1 @@
-host -t ns slash16.org
-nslookup slash16.org ns-1236.awsdns-26.org | grep 'Address' | awk '{print $2}'
+nslookup slash16.org | grep 'Address' | grep -v '#' | awk '{print $2}'

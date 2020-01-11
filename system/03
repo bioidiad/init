@@ -1,1 +1,3 @@
-/etc/hostname
+vi /etc/hostname
+vi /etc/hosts
+systemctl reboot

@@ -1,2 +1,2 @@
-a) ifconfig | grep "broadcast" | awk {'print $6'}
-b) arp -a | awk {'print $2'} | cut -b 2-16 | cut -d')' -f1
+ifconfig | grep "broadcast" | awk {'print $6'}
+arp -a | awk {'print $2'} | cut -b 2-16 | cut -d')' -f1

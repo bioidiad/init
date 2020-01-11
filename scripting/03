@@ -2,24 +2,24 @@
 
 read -p "Enter user to rename : " myname
 read -p "Enter new user name : " username
-
-mynamecheck=$(getent passwd $myname)
 usercheck=$(getent passwd $username)
+mynamecheck=$(getent passwd $myname)
 
-if [ -z "$mynamecheck"]
+if [ -z "$mynamecheck" ]
 then
     echo "$myname is not listed!"
 else
         if [ -z "$usercheck" ]
         then
+                echo $myname
                 cd /root
                 mkdir -p /home/"Archive"
-                cd home/Archive/
+                cd /home/Archive/
                 tar czvf "$myname".tar.gz /home/"$myname"/
                 sudo userdel -rf "$myname"
                 sudo useradd "$username"
                 mkdir -p /home/"$username"
-                tar -zxf "$myname".tar.gz home/"$username"
+                tar -zxf "$myname".tar.gz --directory /home/"$username"/
         else
                 echo "$username is already exist!"
 fi

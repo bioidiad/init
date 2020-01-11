@@ -1,1 +1,2 @@
-.htaccess: Redirect 301 intra.42.fr http://46.19.122.85/
+on the local modify /etc/hosts 46.19.122.85 intra.42.fr
+on the web server: .htaccess: Redirect 301 intra.42.fr http://46.19.122.85/
